@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>ZYH HOME</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="zyh的个人网站">
+  <meta name="keywords" content="ZYH, zyh, ZYH111, zyh111, zyh666">
+  <meta name="author" content="ZYH">
+<link rel="shortcut icon" href="assets/img/tx.ico">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+<script language=javascript>
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2024,05,22,09,15,55); //创建网站的时间
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffYears = Math.floor(diff/years);
+        var diffDays = Math.floor((diff/days)-diffYears*365);
+        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById("sitetime").innerHTML=+diffYears+"年"+diffDays+"天"+diffHours+"时"+diffMinutes+"分钟"+diffSeconds+"秒";
+    }
+    siteTime();
+
+</script>
+<style>
+	.white{
+			color:white;
+			font-size: 300%;
+			 margin: 0;
+  			padding: 0;
+		}
+	a{
+		text-decoration: none;
+	}
+</style>
+<style>
+        /* 全局隐藏默认默认光标 */
+        * {
+            cursor: none !important; /* 强制所有元素隐藏藏默认光标 */
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        /* 白色空心小圆圈光标 */
+        .custom-cursor {
+            position: fixed;
+            width: 18px;
+            height: 18px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: opacity 0.1s;
+        }
+
+        /* 示例链接样式 */
+        a {
+            color: #4da6ff;
+            font-size: 1.2rem;
+        }
+    </style>
+<style>
+  .hover-h2 {
+    color: #FFD700; /* 初始颜色，比如浅蓝 */
+    transition: color 0.3s; /* 过渡动画，变 color 时更丝滑 */
+  }
+  .hover-h2:hover {
+    color: #FF6347; /*  hover 时变成番茄红 */
+  }
+</style>  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-minimal.css" rel="stylesheet" />
+<style>
+/* 调整进度条宽度 */
+/* 覆盖Pace.js默认样式 */
+.pace .pace-progress {
+  background: linear-gradient(90deg, #ff0a54, #ff85a1) !important;
+  height: 8px !important;
+}
+</style>
+<style>
+.color-transition {
+                        
+            /* 定义蓝到紫的渐变背景 */
+            background: linear-gradient(90deg, #4facfe, #7a5af8, #4facfe);
+            background-size: 200% 200%; /* 扩大背景尺寸以实现动画效果 */
+            -webkit-background-clip: text; /* 将背景裁剪为文字形状 */
+            background-clip: text;
+            color: transparent; /* 文字透明，显示背景渐变 */
+            /* 添加            动画效果：
+            - 名称为colorShift
+            - 3秒完成一次循环
+            - 线性速度
+            - 无限重复
+            */
+            animation: colorShift 1.5s linear infinite;
+        }
+
+        @keyframes colorShift {
+            0% {
+                background-position: 0% 50%; /* 起始位置（蓝色） */
+            }
+            100% {
+                background-position: 200% 50%; /* 结束位置（回到蓝色） */
+            }
+        }
+</style>
+<style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 2rem;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 提示框样式 - 默认隐藏 */
+        .device-notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .notification-content {
+            max-width: 350px;
+        }
+
+        .device-icon {
+            font-size: 4rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .notification-title {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .notification-message {
+            color: #eee;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .close-btn {
+            background-color: #4a6cf7;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .close-btn:hover {
+            background-color: #3a5ae7;
+        }
+    </style>
+ <style>
+        
+
+        /* 头像图片样式 */
+       .avatar-img {
+            width: 420px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 16px;
+            background-color: #0f172a;
+        }
+
+        
+        
+    </style>
+<link rel="stylesheet" href="https://scdn.星.fun/icp.css">
+</head>
+
+
+
+<body>
+<div class="custom-cursor"></div>
+
+<div class="device-notification" id="mobileNotice">
+        <div class="notification-content">
+            <div class="device-icon">💻</div>
+            <h2 class="notification-title">请在电脑端浏览本站</h2>
+            <p class="notification-message">
+                本网站在电脑端有更好的浏览体验和完整功能，<br>
+                建议使用台式机或笔记本电脑访问。
+                若您是电脑端，请横屏浏览本站。
+            </p>
+            <button class="close-btn" id="closeNotice">我知道了</button>
+        </div>
+
+    </div>
+
+ <!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="https://zyh666.dpdns.org">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>ZYH</p>
+  </a>
+  <p class="device-notification--message"></p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+.
+        <header class="header">
+
+          <a class="header--logo" href="#0">
+            <img src="assets/img/logo.png" alt="ZYH">
+            <p>ZYH</p>
+
+          </a>
+          
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+
+        </header>
+
+        
+        
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>这是<div class="color-transition">ZYH</div>的个人网站！</h1>
+
+                <h2 class="hover-h2">✨ 点击右上角菜单，开始探索吧！✨</h2>
+
+                 
+
+                  <span class="btn-background"></span>
+                </button>
+                <div class="avatar-wrapper">
+        <div class="avatar-container">
+            <img src="https://zyh666.dpdns.org/assets/img/introduction-visual.gif" 
+                 alt="ZYH动态介绍图" 
+                 class="avatar-img">
+        </div>
+            </div>
+      </div>        
+<h3>本站已经很不安全的运营了：
+                  <p><span id="sitetime"  style="color: #3f7fe0;" ></span></p>
+<p>本站总访问量 <span id="busuanzi_value_site_pv" style="color: #B0B0B0 ;"></span> 次
+         本站总访客数 <span id="busuanzi_value_site_uv" style="color: #B0B0B0 ;"></span> 人</p></h3>
+<a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力">
+    <img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120">
+</a>
+
+             </li>
+
+
+ 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <ul class="outer-nav">
+    <a href="https://zyh666.dpdns.org/"><h1 class="white" >Home</h1></a>
+   <a href="https://zyh666.dpdns.org/friends.html"><h1 class="white">我的友链</h1></a>
+    <a href="https://zyh666.dpdns.org/pictures.html"><h1 class="white">我的相册</h1></a>
+    <a href="https://zyh666.dpdns.org/about.html"><h1 class="white">关于我/网站</h1></a>
+    <a href="https://plq.zyh666.dpdns.org/"><h1 class="white">留言板</h1></a>
+<a href="https://share.feijipan.com/s/ClDjh2K2"><h1 class="white">网盘</h1></a>
+
+<a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力">
+    <img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="200">
+</a>
+
+  </ul>
+
+</div>
+<script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        // 跟随鼠标移动
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+    </script>
+<script>
+    // 获取提示框元素
+    const mobileNotice = document.getElementById('mobileNotice');
+    const closeBtn = document.getElementById('closeNotice');
+
+    // 检测设备是否为移动设备（手机或平板）
+    function isMobileDevice() {
+      // 检测屏幕宽度
+      const isSmallScreen = window.innerWidth < 800; 
+      // 检测触摸支持和用户代理
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0; 
+
+      return isSmallScreen && isTouchDevice;
+    }
+
+    // 显示提示框
+    function showNotice() {
+      if (isMobileDevice()) {
+        mobileNotice.style.display = 'flex';
+      }
+    }
+
+    // 关闭提示框
+    closeBtn.addEventListener('click', () => {
+      mobileNotice.style.display = 'none';
+    });
+
+    // 页面加载时检测并显示提示
+    window.addEventListener('load', showNotice);
+
+    // 窗口大小改变时重新检测
+    window.addEventListener('resize', showNotice);
+  </script>
+<script defer src="https://vercount.one/js"></script>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+</body>
+</html>

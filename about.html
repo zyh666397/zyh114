@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>关于我/网站</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="zyh的个人网站">
+  <meta name="keywords" content="ZYH, zyh, ZYH111, zyh111, zyh666">
+  <meta name="author" content="ZYH">
+<link rel="shortcut icon" href="assets/img/tx.ico">
+
+  <!-- 保持风格统一的基础样式（可复用项目全局样式） -->
+<style>
+        /* 全局隐藏默认默认光标 */
+        * {
+            cursor: none !important; /* 强制所有元素隐藏藏默认光标 */
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        /* 白色空心小圆圈光标 */
+        .custom-cursor {
+            position: fixed;
+            width: 18px;
+            height: 18px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: opacity 0.1s;
+        }
+
+        /* 示例链接样式 */
+        a {
+            color: #4da6ff;
+            font-size: 1.2rem;
+        }
+    </style>
+
+  <style>
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background-color: #121212; /* 深灰暗黑背景 */
+      color: #fff; 
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a {
+      color: #646cff; 
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #8b92ff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+      </style>
+  <!-- 页面专属样式 -->
+  <style>
+    /* 头部导航（若需独立页面，可简化为固定/简约导航） */
+    .about-header {
+      padding: 2rem 0;
+      background-color: #1f1f1f;
+      margin-bottom: 4rem;
+    }
+    .about-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .about-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .back-link {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    /* 关于我主内容 */
+    .about-section {
+      padding: 4rem 0;
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    @media (min-width: 768px) {
+      .about-content {
+        grid-template-columns: 400px 1fr;
+      }
+    }
+    .about-avatar {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0 auto;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .about-text p {
+      color: #ccc;
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+    }
+
+    /* 经历/技能模块 */
+    .timeline {
+      margin-bottom: 4rem;
+    }
+    .timeline-item {
+      background-color: #1f1f1f;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      transition: transform 0.3s;
+    }
+    .timeline-item:hover {
+      transform: translateY(-5px);
+    }
+    .timeline-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .timeline-desc {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* 社交/联系模块 */
+    .contact-section {
+      background-color: #1f1f1f;
+      padding: 3rem;
+      border-radius: 8px;
+    }
+.contact-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .contact-title-1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+	text-align:center;
+    }
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 1.5rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #ccc;
+    }
+    .contact-item i {
+      font-size: 1.2rem;
+      color: #646cff;
+    }
+
+    /* 响应式适配 */
+    @media (max-width: 768px) {
+      .about-text h2 {
+        font-size: 2rem;
+      }
+      .timeline-item {
+        padding: 1.5rem;
+      }
+      .contact-section {
+        padding: 2rem;
+      }
+    }
+  </style>
+<style>
+  .hover-h2 {
+    color: #FFD700; /* 初始颜色，比如浅蓝 */
+    transition: color 0.3s; /* 过渡动画，变 color 时更丝滑 */
+  }
+  .hover-h2:hover {
+    color: #FF6347; /*  hover 时变成番茄红 */
+  }
+</style>  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-minimal.css" rel="stylesheet" />
+<style>
+/* 调整进度条宽度 */
+/* 覆盖Pace.js默认样式 */
+.pace .pace-progress {
+  background: linear-gradient(90deg, #ff0a54, #ff85a1) !important;
+  height: 8px !important;
+}
+</style>
+
+</head>
+<body>
+<div class="custom-cursor"></div>
+
+  <!-- 加载动画（可选，模拟页面过渡） -->
+  <div class="loader-section" id="loader">
+    <div class="loader"></div>
+    <div class="loader"></div>
+    <div class="loader"></div>
+  </div>
+
+  <!-- 页面内容 -->
+  <div class="about-header" style="display: none;">
+    <div class="container about-nav">
+      <div class="about-title">关于我/网站</div>
+      <a href="index.html" class="back-link">返回首页</a>
+    </div>
+  </div>
+
+  <div class="container about-section" style="display: none;">
+    <!-- 关于我内容 -->
+    <section class="about-content">
+      <img 
+        src="assets/img/tx.jpg" 
+        alt="个人头像" 
+        class="about-avatar"
+      />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>大家好，我是 <span style="color:#646cff;">ZYH</span>，一个爱好创作的学生</p>
+	<p>我喜欢编程，数学和游戏"Minecraft"</p>
+        <p>这里记录着我的创作思考、成长轨迹，以及那些关于创作的热爱与坚持</p>
+      </div>
+    </section>
+
+    
+    <!-- 联系/社交 -->
+    <section class="contact-section">
+      <h3 class="contact-title">找到我</h3>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <i class="fa fa-envelope"></i>
+          <span><a href="mailto:zyh20120603@outlook.com">zyh20120603@outlook.com</a></span>
+        </li>
+        <li class="contact-item">
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/zyh666397" target="_blank">GitHub</a>
+        </li>
+        <li class="contact-item">
+          <i class="bilibili"></i>
+          <a href="https://space.bilibili.com/1033814613?spm_id_from=333.788.0.0" target="_blank">Bilibili</a>
+        </li>
+             </ul>
+    </section>
+  </div>
+<section class="contact-section">
+<h3 class="contact-title-1">关于网站</h3>
+
+            <ul class="contact-list">
+        <h3><p><a href="https://ipw.cn/ssl/?site=zyh666.dpdns.org" title="本站支持SSL安全访问" target='_blank'><img style='display:inline-block;vertical-align:middle' alt="本站支持SSL安全访问" src="https://static.ipw.cn/icon/ssl-s1.svg"></a>
+                <a href="https://ipw.cn/ipv6webcheck/?site=zyh666.dpdns.org" title="本站支持IPv6访问" target='_blank'><img style='display:inline-block;vertical-align:middle' alt="本站支持IPv6访问" src="https://static.ipw.cn/icon/ipv6-s1.svg"></a>
+<a href="https://icp.gov.moe/?keyword=20248801" target="_blank" style="color:white;" ><img style="width:32px;height:32px;margin-bottom:-8px" src="moe-icon.jpg">萌ICP备 20248801号</a>
+    <a href="https://icp.wudu.ltd/xg.php?keyword=20251145"><img src="https://shields.wudu.ltd/gen.php?part1=雾备&amp;part2=ZYH HOME&amp;url=https://icp.wudu.ltd/xg.php?keyword=20251145;style=blue" alt="雾备案标识"></a>
+<a href="https://travel.moe/go" target="_blank">
+    <img src="https://travel.moe/images/logo/gif-kt/startup-pink-dark.gif" style="width:auto;height:36px" title="异次元之旅-跃迁-我们一起去萌站成员的星球旅行吧！"></a>
+<a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力">
+    <img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="160">
+</a></p></h3>
+
+             </ul>
+    </section>
+  </div>
+
+  <!-- 交互：加载动画过渡 -->
+<script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        // 跟随鼠标移动
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+    </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const header = document.querySelector('.about-header');
+      const section = document.querySelector('.about-section');
+      
+      // 隐藏加载动画
+      loader.style.display = 'none';
+      // 显示页面内容
+      header.style.display = 'block';
+      section.style.display = 'block';
+      
+      // 可选：添加渐显动画
+      setTimeout(() => {
+        section.style.opacity = 1;
+      }, 300);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYH友链</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="zyh友链">
+  <meta name="keywords" content="ZYH,zyh,ZYH111,zyh111,zyh666,友链">
+  <meta name="author" content="ZYH">
+<link rel="shortcut icon" href="assets/img/tx.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                            600: '#475569',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            400: '#a78bfa',
+                            300: '#c084fc',
+                        },
+                        neon: {
+                            purple: '#8b5cf6',
+                            pink: '#ec4899',
+                            blue: '#3b82f6',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:shadow-accent-500/20 hover:-translate-y-1;
+            }
+            .glow {
+                box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            .grid-auto-fit {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-minimal.css" rel="stylesheet" />
+<style>
+/* 调整进度条宽度 */
+/* 覆盖Pace.js默认样式 */
+.pace .pace-progress {
+  background: linear-gradient(90deg, #ff0a54, #ff85a1) !important;
+  height: 8px !important;
+}
+</style>
+<style>
+       /* 全局隐藏默认默认光标 */
+        * {
+            cursor: none !important; /* 强制所有元素隐藏藏默认光标 */
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        /* 白色空心小圆圈光标 */
+        .custom-cursor {
+            position: fixed;
+            width: 18px;
+            height: 18px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: opacity 0.1s;
+        }
+
+        /* 示例链接样式 */
+        a {
+            color: #4da6ff;
+            font-size: 1.2rem;
+        }
+    </style>
+
+</head>
+<body class="bg-dark-900 text-gray-100 font-inter min-h-screen flex flex-col">
+<div class="custom-cursor"></div>
+    <!-- 友链列表 -->
+    <section class="py-16 bg-dark-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">我的<span class="text-accent-400">友链</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">所有友链：</p>
+            </div>
+            
+            <!-- 友链卡片网格 -->
+            <div class="grid grid-auto-fit gap-6">
+                <!-- 友链卡片 1 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-xl overflow-hidden card-hover">
+                    <div class="flex p-6">
+                        <img src="https://www.fis.ink/img/logo.png" alt="友链Logo" class="w-16 h-16 rounded-lg object-cover mr-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-bold hover:text-accent-400 transition-colors">
+                                    <a href="https://blog.fis.ink/">fishcpy的小破站</a>
+                                </h3>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-2 line-clamp-2">非淡泊无以明志，非宁静无以致远</p>
+                            <div class="flex items-center mt-3 text-xs text-gray-500">
+                                <span class="flex items-center mr-4">
+                                    <i class="fa fa-calendar-o mr-1"></i> 2025-7-16
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fa fa-eye mr-1"></i> 1145k
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+<!-- 友链卡片 2 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-xl overflow-hidden card-hover">
+                    <div class="flex p-6">
+                        <img src="https://pic.swtmax.top/file/1754098879667_头像.webp" alt="友链Logo" class="w-16 h-16 rounded-lg object-cover mr-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-bold hover:text-accent-400 transition-colors">
+                                    <a href="https://swtmax.top">SWT</a>
+                                </h3>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-2 line-clamp-2">原神启动</p>
+                            <div class="flex items-center mt-3 text-xs text-gray-500">
+                                <span class="flex items-center mr-4">
+                                    <i class="fa fa-calendar-o mr-1"></i> 2025-8-2
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fa fa-eye mr-1"></i> 5418k
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                                
+                      </section>
+<!-- 友链申请 -->
+    <section class="py-16 bg-dark-800 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-neon-purple/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto bg-dark-900/80 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-dark-700">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4">申请<span class="text-accent-400">友链</span></h2>
+ <p>申请友链请仿照以下格式发送给zyh20120603@outlook.com（本站信息也在下面）</p>
+
+                    <p class="text-gray-400">网站名称:ZYH HOME</p>
+<p class="text-gray-400">网站地址:https://zyh666.dpdns.org</p>
+<p class="text-gray-400">网站图标:https://zyh666.dpdns.org/assets/img/tx.jpg</p>
+<p class="text-gray-400">网站描述:Who is minecraft?</p>
+<p class="text-gray-400">网站类型:个人网站</p>
+ <a href="https://zyh666.dpdns.org">返回主页</a>
+
+                </div>
+                
+
+    </section>
+                <!-- JavaScript -->
+<script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        // 跟随鼠标移动
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+    </script>
+    <script>
+        // 友链卡片悬停动画
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('glow');
+            });
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('glow');
+            });
+        });
+    </script>
+</body>
+</html>    
